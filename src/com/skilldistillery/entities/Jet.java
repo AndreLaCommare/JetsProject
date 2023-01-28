@@ -7,6 +7,8 @@ public abstract class Jet {
 	private double speed;
 	private int range;
 	private long price;
+	
+	public abstract void fly();
 
 	public Jet() {
 		
@@ -75,11 +77,9 @@ public abstract class Jet {
 				&& Double.doubleToLongBits(speed) == Double.doubleToLongBits(other.speed);
 	}
 	
-	private void fly() {
-		
-	}
 	
-	private double getSpeedInMach() {
+	
+	public double getSpeedInMach() {
 		double answer = 0;
 		return answer;
 	}

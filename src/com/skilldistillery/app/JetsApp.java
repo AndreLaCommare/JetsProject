@@ -16,28 +16,46 @@ public class JetsApp {
 
 	private void run() {
 		Scanner kb = new Scanner(System.in);
-		String userInput = kb.nextLine();
+		String userInput = "";
 
 		while (!(userInput.equals("9"))) {
 			printMenu();
 			userInput = kb.nextLine();
 			switch (userInput) {
 			case "1":
+				airF.listFleet();
+				break;
 			case "2":
+				airF.flyAllJets();
+				break;
 			case "3":
+				airF.viewFastestJet();
+				break;
 			case "4":
+				airF.viewLongestRangeJet();
+				break;
 			case "5":
+				airF.loadAllCargoPlanes();
+				break;
 			case "6":
+				airF.dogFight();
+				break;
 			case "7":
+				airF.addJetToFleet();
+				break;
 			case "8":
+				airF.removeJetFromFleet();
+				break;
 			case "9":
 				System.out.println("======= Goodbye =======");
 				return;
 			default:
 				System.out.println("Invalid Input");
+
 				break;
 			}
 		}
+		kb.close();
 	}
 
 	private void printMenu() {

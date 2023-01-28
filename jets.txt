@@ -1,3 +1,5 @@
-FighterJet,F22,500,2000,500
-CargoPlane,C10,200,5000,400
-PassengerPlane,Boeing747,350,2000,250
+FighterJet,F22,500,2000,5000000
+CargoPlane,C10,200,5000,4000000
+PassengerPlane,Boeing747,350,2000,2500000
+SpaceXJet,Falcon9,24610,12000,62000000
+Cesna,SkyCatcher,135,541,46900

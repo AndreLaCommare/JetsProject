@@ -1,12 +1,23 @@
 package com.skilldistillery.entities;
 
-public abstract class FighterJet extends Jet implements CombatReady{
-	FighterJet(){
-		
+public class FighterJet extends Jet implements CombatReady {
+	FighterJet() {
+
 	}
-	FighterJet(String name, double speed, int range, long price){
+
+	FighterJet(String model, double speed, int range, long price) {
 		super();
-		//fight(); (?)
+
 	}
-	public abstract void fight();
+
+	@Override
+	public void fight() {
+		System.out.println("A fighter jet engages its target and its guns go BBRRRRRRRRRRRRRRRTTTTTTTT!!!!!!!");
+	}
+
+	@Override
+	public void fly() {
+		System.out.println("A fighter jet sours swiftly through the clouds and tears holes through the sound barrier.");
+	}
+
 }
