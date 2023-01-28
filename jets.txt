@@ -1,2 +1,3 @@
 FighterJet,F22,500,2000,500
 CargoPlane,C10,200,5000,400
+PassengerPlane,Boeing747,350,2000,250
