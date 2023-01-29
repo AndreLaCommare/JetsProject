@@ -1,5 +1,6 @@
 package com.skilldistillery.entities;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 public abstract class Jet {
@@ -86,11 +87,13 @@ public abstract class Jet {
 	}
 	
 	public void listJetDetails() {
+		DecimalFormat df = new DecimalFormat("#.##");
 		System.out.println("jet model: " + getModel() );
 		
-		System.out.println("jet speed: " + getSpeed() );
-		System.out.println("jet range: " + getRange() );
-		System.out.println("jet price: " + getPrice() );
+		System.out.println("jet speed in mph: " + getSpeed() );
+		System.out.println("jet speed in Mach: " + df.format(getSpeed()/761.2) );
+		System.out.println("jet range in miles: " + getRange() );
+		System.out.println("jet price in USD: " + getPrice() );
 		System.out.println();
 		
 	}
