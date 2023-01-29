@@ -1,5 +1,7 @@
 package com.skilldistillery.entities;
 
+import java.text.DecimalFormat;
+
 public class PassengerPlane extends Jet implements PassengersLoaded {
 	public PassengerPlane() {
 
@@ -18,6 +20,7 @@ public class PassengerPlane extends Jet implements PassengersLoaded {
 
 	@Override
 	public void fly() {
-		System.out.println("The " + this.getModel() +" accelerates slowly and steadily to a cruising altitude of 35,000 ft.");
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println("The " + this.getModel() +" accelerates slowly and steadily to a cruising altitude of 35,000 ft. For a max flight time of " + df.format(this.getRange()/this.getSpeed()) + " hours.");
 	}
 }

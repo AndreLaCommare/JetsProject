@@ -1,5 +1,7 @@
 package com.skilldistillery.entities;
 
+import java.text.DecimalFormat;
+
 public class SpaceXJet extends Jet{
 	
 	public SpaceXJet() {
@@ -13,9 +15,11 @@ public class SpaceXJet extends Jet{
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println("This is Elon's "+ this.getModel() + ", there are many like it. But this one is Elon's.\n" +
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println("\nThis is Elon's "+ this.getModel() + ", there are many like it. But this one is Elon's.\n" +
 		"Elon's " + this.getModel() + " is his best friend. It is his life. He must master it as he must master his life.\n" +
-		"Elon's " + this.getModel() + ", without him, is useless. Without his jet, Elon is uselss.");
+		"Elon's " + this.getModel() + ", without him, is useless. Without his jet, Elon is uselss.\n");
+		System.out.println("\n" + this.getModel() + "'s max flight time is " + df.format(this.getRange()/this.getSpeed()) + " hours. Before reentering Earth's lower atmosphere.\n");
 	}
 
 }

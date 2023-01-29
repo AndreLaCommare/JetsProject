@@ -1,5 +1,7 @@
 package com.skilldistillery.entities;
 
+import java.text.DecimalFormat;
+
 public class JetImpl extends Jet {
 	public JetImpl() {
 		
@@ -13,7 +15,8 @@ public class JetImpl extends Jet {
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println(this.getModel() + " takes a generic, user generated flight");
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println(this.getModel() + " takes a generic, user generated flight for a maximum of " +df.format(this.getRange()/this.getSpeed()) + " hours.");
 	}
 
 }

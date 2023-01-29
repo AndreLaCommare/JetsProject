@@ -1,5 +1,7 @@
 package com.skilldistillery.entities;
 
+import java.text.DecimalFormat;
+
 public class Cesna extends Jet {
 	
 	
@@ -13,7 +15,9 @@ public class Cesna extends Jet {
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println("The Cesna takes a joyride up and down the coast for scenic views.");
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println("The " + this.getModel() + " takes a joyride up and down the coast for scenic views."
+				+ " It has a max flight time of " + df.format(this.getRange()/this.getSpeed()) + " hours.");
 	}
 	
 }
