@@ -6,20 +6,20 @@ public class CargoPlane extends Jet implements CargoCarrier {
 	}
 
 	public CargoPlane(String model, double speed, int range, long price) {
-		super();
+		super(model,speed, range, price);
 		// loadCargo(); (?)
 	}
 
 	@Override
 	public void loadCargo() {
 		// TODO Auto-generated method stub
-		System.out.println("I am cargo carrier and i load");
+		System.out.println("I am " + this.getModel() + " carrier and I load.");
 	}
 
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println("A Cargo Plane rumbles across the sky slowly");
+		System.out.println("A " + this.getModel() + " rumbles across the sky slowly." );
 	}
 
 }

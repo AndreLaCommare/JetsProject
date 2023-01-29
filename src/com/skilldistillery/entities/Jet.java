@@ -9,6 +9,7 @@ public abstract class Jet {
 	private long price;
 	
 	public abstract void fly();
+	
 
 	public Jet() {
 		
@@ -55,7 +56,7 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet " + (model != null ? "model: " + model + ", " : "") + "speed: " + speed + ", range=" + range
+		return "Jet " + (model != null ? "model: " + model + ", " : "") + "speed: " + speed + ", range: " + range
 				+ ", price: " + price;
 	}
 
@@ -82,6 +83,16 @@ public abstract class Jet {
 	public double getSpeedInMach() {
 		double answer = 0;
 		return answer;
+	}
+	
+	public void listJetDetails() {
+		System.out.println("jet model: " + getModel() );
+		
+		System.out.println("jet speed: " + getSpeed() );
+		System.out.println("jet range: " + getRange() );
+		System.out.println("jet price: " + getPrice() );
+		System.out.println();
+		
 	}
 	
 	

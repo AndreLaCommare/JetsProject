@@ -8,7 +8,7 @@ public class Cesna extends Jet {
 	}
 	
 	public Cesna(String model, double speed, int range, long price) {
-		super();
+		super(model,speed, range, price);
 	}
 	@Override
 	public void fly() {
